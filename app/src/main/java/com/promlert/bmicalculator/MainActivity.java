@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         mCalculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Double height = Double.valueOf(mHeightEditText.getText().toString());
-                Double weight = Double.valueOf(mWeightEditText.getText().toString());
+                double height = Double.valueOf(mHeightEditText.getText().toString());
+                double weight = Double.valueOf(mWeightEditText.getText().toString());
 
-                Double bmi = weight / ((height / 100) * (height / 100));
+                double bmi = weight / ((height / 100) * (height / 100));
                 String bmiText = getBmiText(bmi);
 
                 String result = String.format("ค่า BMI ที่ได้คือ %.1f\n\nอยู่ในเกณฑ์ : %s", bmi, bmiText);
